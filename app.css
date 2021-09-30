@@ -8,18 +8,20 @@ body{
     color: #000;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0 12px;
 }
+
 .wrapper{
     background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 50px auto;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    width: 500px;
-    height: 90%;
+    width: 400px;
+    height: 100%;
     padding: 20px;
+}
+form{
+    width: 90%;
 }
 
 h2{
@@ -30,87 +32,96 @@ h2{
 }
 
 h4{
-    margin: 7px;
+    margin: 5px;
 }
 
-.input-box input.name{
-    width: 320px;
-    height: 28px;
+.input-box{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.name, .card{
+    border: none;
+    outline: none;
+    width: 70%;
+    height: 34px;
+    border-bottom: 1px solid black;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+.name input{
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+}
+
+input::placeholder{
+    color: white;
+    padding-left: 8px;
+}
+
+.input-grup input[type=text]{
+    width: 10%;
+    border-radius: 8px;
+    height: 25px;
     border-radius: 5px;
+    margin: 0 3px;
+    padding: 0 8px;
+    background: transparent;
+    border: 1px solid black;
+    outline: none;
+}
+
+label{
+    color: white;
+}
+
+.input-grup{
     margin: 10px 0;
 }
 
-.input-box> input.dob{
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 0 3px;
-    width: 25px;
+.input-grup input[type=radio]{
+    margin: 10px 0;
 }
 
-input[type=tel]{
-    width: 80px;
-    border-radius: 5px;
-    height: 25px;
-    margin: 5px 0;
+.card input{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.fa{
+    margin-left: 10px;
 }
 
 select{
     width: 90px;
     padding: 8px;
     border-radius: 8px;
-    margin: 15px 10px;
+    margin: 15px 7px;
     text-align: center;
 }
 
 button{
-    width: 300px;
+    padding: 12px;
+    width: 60%;
     color: #fff;
     height: 35px;
-    border-radius: 5px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
     background-color: #000;
     outline: hidden;
     text-align: center;
     font-style: 28px;
-    margin: auto 15px ;
+    margin-top: 20px;
+    margin-left: 50px;
 }
 
 button:hover{
     cursor: pointer;
-}
-
-/* smaller screenm view*/
-
-@media (max-width:650px) {
-    .wrapper{
-        width: 450px;
-    }
-    
-    h2{
-        font-size: 30px;
-    }
-
-    h4{
-        font-size: 15px;
-    }
-
-    .input-box input.name{
-        width: 80%;
-    }
-
-    .input-box> input.dob{
-        width: 20%;
-    }
-
-    input[type=tel]{
-        width: 80%;
-    }
-
-    select{
-        width: 20%;
-    }
-
-    button{
-        width: 25%;
-    }
 }
